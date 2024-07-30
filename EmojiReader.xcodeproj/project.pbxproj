@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		2CAC0A912C587194005A77D8 /* EmojiTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CAC0A902C587194005A77D8 /* EmojiTableViewCell.swift */; };
+		2CAC0A932C58D064005A77D8 /* EmojiModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CAC0A922C58D064005A77D8 /* EmojiModel.swift */; };
 		2CC3A6662C525F2200066727 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CC3A6652C525F2200066727 /* AppDelegate.swift */; };
 		2CC3A6682C525F2200066727 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CC3A6672C525F2200066727 /* SceneDelegate.swift */; };
 		2CC3A66D2C525F2200066727 /* Base in Resources */ = {isa = PBXBuildFile; fileRef = 2CC3A66C2C525F2200066727 /* Base */; };
@@ -18,6 +19,7 @@
 
 /* Begin PBXFileReference section */
 		2CAC0A902C587194005A77D8 /* EmojiTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmojiTableViewCell.swift; sourceTree = "<group>"; };
+		2CAC0A922C58D064005A77D8 /* EmojiModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmojiModel.swift; sourceTree = "<group>"; };
 		2CC3A6622C525F2200066727 /* EmojiReader.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EmojiReader.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2CC3A6652C525F2200066727 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2CC3A6672C525F2200066727 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -61,6 +63,7 @@
 				2CC3A6652C525F2200066727 /* AppDelegate.swift */,
 				2CC3A6672C525F2200066727 /* SceneDelegate.swift */,
 				2CC3A6792C5261D300066727 /* EmojiTableViewController.swift */,
+				2CAC0A922C58D064005A77D8 /* EmojiModel.swift */,
 				2CAC0A902C587194005A77D8 /* EmojiTableViewCell.swift */,
 				2CC3A66B2C525F2200066727 /* Main.storyboard */,
 				2CC3A66E2C525F2300066727 /* Assets.xcassets */,
@@ -144,6 +147,7 @@
 				2CC3A6662C525F2200066727 /* AppDelegate.swift in Sources */,
 				2CC3A6682C525F2200066727 /* SceneDelegate.swift in Sources */,
 				2CAC0A912C587194005A77D8 /* EmojiTableViewCell.swift in Sources */,
+				2CAC0A932C58D064005A77D8 /* EmojiModel.swift in Sources */,
 				2CC3A67A2C5261D300066727 /* EmojiTableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
