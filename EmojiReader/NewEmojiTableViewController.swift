@@ -8,18 +8,19 @@
 import UIKit
 
 class NewEmojiTableViewController: UITableViewController {
-
+    
     var emoji = Emoji(emoji: "", name: "", description: "", isFavorite: false)
-
+    
     @IBOutlet weak var emojiUITextField: UITextField!
     @IBOutlet weak var nameUITextField: UITextField!
     @IBOutlet weak var descriptionUITextField: UITextField!
-     
+    
     @IBOutlet weak var saveButton: UIBarButtonItem!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        updateUI()
         updateSabeButtonState()
     }
     
@@ -30,9 +31,15 @@ class NewEmojiTableViewController: UITableViewController {
         
         saveButton.isEnabled = !emojiText.isEmpty && !nameText.isEmpty && !descriptionText.isEmpty
     }
-     
+    
+    private func updateUI() {
+        emojiUITextField.text = emoji.emoji
+        nameUITextField.text = emoji.name
+        descriptionUITextField.text = emoji.description
+    }
+    
     @IBAction func textChanged(_ sender: UITextField) {
-         updateSabeButtonState()
+        updateSabeButtonState()
     }
     
     override func prepare(for segue: UIStoryboardSegue,  sender: Any?) {

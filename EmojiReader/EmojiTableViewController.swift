@@ -24,14 +24,31 @@ class EmojiTableViewController: UITableViewController {
         tableView.backgroundColor = .brown
     }
     
-    @IBAction  func unwindSegue(segue: UIStoryboardSegue) {
+    @IBAction func unwindSegue(segue: UIStoryboardSegue) {
         guard segue.identifier == "saveSegue" else { return }
         let sourceViewController = segue.source as! NewEmojiTableViewController
         let emoji = sourceViewController.emoji
         
-        let newIndexPath = IndexPath(row: objects.count, section: 0)
-        objects.append(emoji)
-        tableView.insertRows(at: [newIndexPath], with: .fade )
+        if let selectedIndexPath = tableView.indexPathForSelectedRow {
+            objects[selectedIndexPath.row] = emoji
+            tableView.reloadRows(at: [selectedIndexPath], with: .fade)
+        } else {
+            let newIndexPath = IndexPath(row: objects.count, section: 0)
+            objects.append(emoji)
+            tableView.insertRows(at: [newIndexPath], with: .fade )
+        }
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        super.prepare(for: segue, sender: sender)
+        guard segue.identifier == "editEmoji" else { return }
+        let indexPath = tableView.indexPathForSelectedRow!
+        let emoji = objects[indexPath.row]
+        let navigationViewController = segue.destination as! UINavigationController
+        let newEmojiViewController = navigationViewController.topViewController as! NewEmojiTableViewController
+        newEmojiViewController.emoji = emoji
+        newEmojiViewController.title = "Edit"
+        
     }
     
     override func numberOfSections(in tableView: UITableView) -> Int {
